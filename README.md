@@ -40,8 +40,9 @@ sudo cp /tmp/GLSL_150_scripts/*.material /opt/ros/humble/share/rviz_rendering/og
 
 ```bash
 ros2 launch nvblox_examples_bringup isaac_sim_example.launch.py \
-  rosbag:=/workspaces/isaac_ros-dev/isaac_ros_assets/isaac_ros_nvblox/quickstart \
-  navigation:=False
+    rosbag:=/workspaces/isaac_ros-dev/isaac_ros_assets/isaac_ros_nvblox/quickstart \
+    navigation:=False \
+    rosbag_args:="--loop"
 ```
 
 RViz2 should now run without geometry shader errors.
